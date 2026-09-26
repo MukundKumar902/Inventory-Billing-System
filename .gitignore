@@ -1,0 +1,23 @@
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Maven / Java
+target/
+backend/target/
+backend/maven/
+*.class
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE & OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
+
+# Neon local temp
+.neon/

@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: billing-system
+  
+  # Neon Cloud PostgreSQL Database Configuration
+  datasource:
+    url: jdbc:postgresql://ep-snowy-shadow-b4c5bwdt-pooler.c-6.us-east-2.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_exYk6tXbvPG3
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# To switch back to H2 in-memory DB for offline testing:
+# spring:
+#   datasource:
+#     url: jdbc:h2:mem:inventorydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+#     driver-class-name: org.h2.Driver
+#     username: sa
+#     password:
+#   jpa:
+#     database-platform: org.hibernate.dialect.H2Dialect
+
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expiration: 86400000 # 24 Hours in milliseconds
